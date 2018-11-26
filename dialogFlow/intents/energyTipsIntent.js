@@ -1,9 +1,3 @@
-const dialogflow = require('dialogflow');
-
-const projectId = 'pillar-voice';
-
-const intentsClient = new dialogflow.IntentsClient();
-
 const trainingPhrase1 = {
     name: "3f276794-59de-4483-b3aa-4713a5ebc762",
     type: "TEMPLATE",
@@ -29,7 +23,7 @@ const message = {
     }
 };
 
-const intentToCreate = {
+const energyTipsIntent = {
     displayName: "energy tips",
     trainingPhrases: [
         trainingPhrase1,
@@ -38,15 +32,4 @@ const intentToCreate = {
     messages: [message]
 };
 
-const createIntentRequest = {
-    parent: intentsClient.projectAgentPath(projectId),
-    intent: intentToCreate,
-};
-console.log("😱");
-console.log(createIntentRequest);
-intentsClient.createIntent(createIntentRequest).then(responses => {
-    console.log(`Intent ${responses[0].name} created`);
-})
-.catch(err => {
-    console.error('ERROR:', err);
-});
+module.exports = energyTipsIntent;
