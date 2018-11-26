@@ -7,5 +7,4 @@ app.intent('outage reported', (conv, {address}) => {
     conv.close(`Thank you, your power has been reported at ${address}.`);
 });
 
-
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest(app);

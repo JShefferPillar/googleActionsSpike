@@ -1,0 +1,15 @@
+{
+  "name": "dialogFlowTest",
+  "description": "Testing code configuring dialog flow",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "dialogflow": "^0.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.0",
+    "eslint-plugin-promise": "^3.6.0"
+  },
+  "private": true
+}
