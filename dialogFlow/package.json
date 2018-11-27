@@ -2,12 +2,16 @@
   "name": "dialogFlowTest",
   "description": "Testing code configuring dialog flow",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "botium-tests": "./ci/botium_tests.sh",
+    "botium-regen": "./ci/regen_botium_convos.sh",
+    "start-emulator": "./ci/start_emulator.sh"
   },
   "dependencies": {
     "dialogflow": "^0.7.0"
   },
   "devDependencies": {
+    "botium-cli": "0.0.28",
     "eslint": "^4.12.0",
     "eslint-plugin-promise": "^3.6.0"
   },
