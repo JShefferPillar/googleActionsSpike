@@ -10,7 +10,7 @@ const trainingPhrase2 = {
     name: "02fd5b0a-cbe8-434b-be67-62a3180cf25b",
     type: "TEMPLATE",
     parts: [{
-        text: "tips plz"
+        text: "tips please"
     }]
 };
 
@@ -18,7 +18,9 @@ const message = {
     text: {
         text: [
             "don't use so much power",
-            "unplug some stuff for a bit"
+            "unplug some stuff for a bit",
+            "Well if your electricity is running.  Then you better go catch it",
+            "Grab some blankets and turn off the heat"
         ]
     }
 };

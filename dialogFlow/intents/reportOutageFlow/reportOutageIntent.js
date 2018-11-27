@@ -8,7 +8,13 @@ const trainingText = [
     "It's dark in my house",
     "power outage",
     "power is out",
-    "electricity is out"
+    "electricity is out",
+    "I aint got no lights",
+    "Powers out",
+    "Lights don't work,",
+    "Report outage",
+    "Report power outage"
+
 ];
 
 const uuids = [
@@ -17,7 +23,12 @@ const uuids = [
     "58f13348-4ead-4d7e-beb1-6abce24d2fc4",
     "6e293004-d4f3-45b2-a6e5-50d4bc3b0af9",
     "228d6c45-e0cc-4ee9-b31c-8ccdde009fe1",
-    "c8801452-2aab-4a45-a637-6942d21d70ba"
+    "c8801452-2aab-4a45-a637-6942d21d70b6",
+    "c8801452-2aab-4a45-a637-6942d21d70b7",
+    "c8801452-2aab-4a45-a637-6942d21d70b8",
+    "c8801452-2aab-4a45-a637-6942d21d70b9",
+    "c8801452-2aab-4a45-a637-6942d21d7010",
+    "c8801452-2aab-4a45-a637-6942d21d7011"
 ];
 
 const trainingPhrases = trainingText.map( (text, index) => {
