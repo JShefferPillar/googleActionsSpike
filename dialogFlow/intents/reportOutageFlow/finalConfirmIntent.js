@@ -1,15 +1,17 @@
-const {outageContext} = require('../../contexts/outageContexts.js');
+const {addressGivenContext} = require('../../contexts/outageContexts.js');
 
 const trainingText = [
-    "no",
-    "no thanks",
-    "stop"
+    "yeah",
+    "yes",
+    "ok",
+    "correct"
 ];
 
 const uuids = [
-    "ac7e44fd-ae13-4308-bc78-9261d59a819d",
-    "97b00714-93bd-493e-99e6-1f636e1ea7ca",
-    "f65c2835-5cd2-4cd0-897a-f5c4a84c4f61"
+    "58f58699-a5f1-4dfe-a3b2-a0a8b60814ee",
+    "7993d2e8-7a9c-4849-940e-540a2c452b2e",
+    "0c8c334d-9bae-4b16-9344-0f47c3e6fe12",
+    "d34f7bfa-1506-4279-a921-38120c19e0a8"
 ];
 
 const trainingPhrases = trainingText.map( (text, index) => {
@@ -25,19 +27,18 @@ const trainingPhrases = trainingText.map( (text, index) => {
 const message = {
     text: {
         text: [
-            "Ok, anything else?"
+            "Oh good.",
         ]
     }
 };
 
 const intent = {
-    displayName: "report_outage_decline",
+    displayName: "final_confirm_intent",
     trainingPhrases: trainingPhrases,
     messages: [message],
-    inputContextNames: [outageContext.name]
+    inputContextNames: [addressGivenContext.name]
 };
 
 module.exports = {
     dialogFlowIntent: intent
 };
-

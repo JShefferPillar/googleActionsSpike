@@ -1,7 +1,7 @@
 const {reset, createIntents, createContexts} = require('./dialogFlowFunctions.js');
 const energyTipsIntent = require('./intents/energyTipsIntent.js');
 const reportOutageIntent = require('./intents/reportOutageFlow/reportOutageIntent.js');
-const outageContext = require('./contexts/outageContext.js');
+const outageContexts = require('./contexts/outageContexts.js');
 
 const projectId = 'pillar-voice';
 const projectPath = `projects/${projectId}`;
@@ -14,7 +14,8 @@ const allIntents = [
 ];
 
 const allContexts = [
-    outageContext
+    outageContexts.outageContext,
+    outageContexts.addressGivenContext
 ];
 
 console.log(`Preparing to nuke agent ${projectPath}`);
