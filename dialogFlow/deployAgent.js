@@ -14,7 +14,8 @@ const allIntents = [
 ];
 
 const allContexts = [
-    outageContexts.outageContext
+    outageContexts.outageContext,
+    outageContexts.addressGivenContext
 ];
 
 console.log(`Preparing to nuke agent ${projectPath}`);

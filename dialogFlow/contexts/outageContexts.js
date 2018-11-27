@@ -10,6 +10,12 @@ const outageContext = {
     lifespanCount: 1
 };
 
+const addressGivenContext = {
+    name: contextClient.contextPath(projectId, sessionId, "address-given-context"),
+    lifespanCount: 1
+};
+
 module.exports = {
-    outageContext
+    outageContext,
+    addressGivenContext
 };

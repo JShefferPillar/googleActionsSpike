@@ -1,4 +1,6 @@
-const {outageContext} = require('../../contexts/outageContexts.js');
+const {outageContext, addressGivenContext} = require('../../contexts/outageContexts.js');
+const finalConfirmIntent = require('./finalConfirmIntent');
+const repeatAddressIntent = require('./repeatAddressIntent');
 
 const trainingText = [
     "yeah",
@@ -39,8 +41,7 @@ const addressParameter = {
 const message = {
     text: {
         text: [
-            "Ok, I'll go ahead and report an outage at $address for you.",
-            "Ok, an outage at $address will be reported"
+            "I have your address as $address. Is that correct?",
         ]
     }
 };
@@ -50,9 +51,11 @@ const intent = {
     trainingPhrases: trainingPhrases,
     messages: [message],
     parameters: [addressParameter],
-    inputContextNames: [outageContext.name]
+    inputContextNames: [outageContext.name],
+    outputContexts: [addressGivenContext]
 };
 
 module.exports = {
-    dialogFlowIntent: intent
+    dialogFlowIntent: intent,
+    followupIntents: [finalConfirmIntent, repeatAddressIntent]
 };
