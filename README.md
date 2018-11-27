@@ -1,5 +1,5 @@
 # To deploy everything:
-Download credentails from google actions console.
+go here: https://cloud.google.com/docs/authentication/getting-started and download a key as a json
 
 ```
 export GOOGLE_APPLICATION_CREDENTIALS=<YOUR_CREDENTIALS_FILE_PATH>.json
