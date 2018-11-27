@@ -1,3 +1,5 @@
+const outageContext = require('../../contexts/outageContext.js');
+
 const trainingText = [
     "yeah",
     "yes",
@@ -47,7 +49,8 @@ const intent = {
     displayName: "collect_address",
     trainingPhrases: trainingPhrases,
     messages: [message],
-    parameters: [addressParameter]
+    parameters: [addressParameter],
+    inputContextNames: [outageContext.name]
 };
 
 module.exports = {

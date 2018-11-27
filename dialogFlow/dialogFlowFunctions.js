@@ -1,8 +1,29 @@
-const {AgentsClient, IntentsClient} = require('dialogflow');
+const {AgentsClient, IntentsClient, ContextsClient} = require('dialogflow');
 const fs = require('fs');
 
 const agentClient = new AgentsClient();
 const intentsClient = new IntentsClient();
+const contextsClient = new ContextsClient();
+
+function createContexts(projectId, sessionId, contexts) {
+    return Promise.all(contexts.map(context => {
+        return createContext(projectId, sessionId, context)
+    }))
+}
+
+function createContext(projectId, sessionId, context) {
+    const sessionPath = contextsClient.sessionPath(projectId, sessionId);
+    console.log(sessionPath);
+
+    const createContextRequest = {
+        parent: sessionPath,
+        context: context,
+    };
+
+    return contextsClient.createContext(createContextRequest).then((responses) => {
+        console.log(`🐔  Successfully created context named ${responses[0].name}`)
+    })
+}
 
 function readZipFile(emptyAgentFilename) {
     return new Promise( (resolve, reject) => {
@@ -60,5 +81,6 @@ function createIntents(projectId, intents) {
 
 module.exports = {
     reset: resetAgent,
-    createIntents
+    createIntents,
+    createContexts
 };

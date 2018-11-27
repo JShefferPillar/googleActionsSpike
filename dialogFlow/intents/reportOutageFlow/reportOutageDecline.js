@@ -1,3 +1,5 @@
+const outageContext = require('../../contexts/outageContext.js');
+
 const trainingText = [
     "no",
     "no thanks",
@@ -31,7 +33,8 @@ const message = {
 const intent = {
     displayName: "report_outage_decline",
     trainingPhrases: trainingPhrases,
-    messages: [message]
+    messages: [message],
+    inputContextNames: [outageContext.name]
 };
 
 module.exports = {
