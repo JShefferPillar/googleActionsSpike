@@ -1,0 +1,37 @@
+success-report
+
+#me
+I aint got no lights
+
+#bot default
+I understood you want to report an outage.  Is that correct?
+
+#me
+sure do
+
+#bot default
+Sorry to hear that.  What address would you like to report an outage for?
+
+#me
+123 West Deer Crick Road, Alabaster Alabama 13579
+
+#bot default
+I heard 123 West Deer Crick Road, Alabaster Alabama 13579 . Is that correct?
+
+#me
+Yup
+
+#bot default
+Just a couple questions while we report your outage.  Is your neighbors power out?
+
+#me
+sure is
+
+#bot default
+Okay, and have you tried resetting you main breakers?
+
+#me
+Yeah I gone done that
+
+#bot default
+Thank you, your power has been reported at 123 West Deer Crick Road, Alabaster Alabama 13579.
