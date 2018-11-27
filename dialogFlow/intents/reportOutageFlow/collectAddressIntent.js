@@ -1,4 +1,4 @@
-const outageContext = require('../../contexts/outageContext.js');
+const {outageContext} = require('../../contexts/outageContexts.js');
 
 const trainingText = [
     "yeah",
