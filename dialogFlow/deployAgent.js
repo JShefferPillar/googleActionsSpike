@@ -1,5 +1,6 @@
 const {reset, createIntents} = require('./dialogFlowFunctions.js');
 const energyTipsIntent = require('./intents/energyTipsIntent.js');
+const reportOutageIntent = require('./intents/reportOutageFlow/reportOutageIntent.js');
 
 const projectId = 'pillar-voice';
 const projectPath = `projects/${projectId}`;
@@ -7,7 +8,8 @@ const projectPath = `projects/${projectId}`;
 const emptyAgentFilename = "dialogFlow/empty-agent.zip";
 
 const allIntents = [
-    energyTipsIntent
+    energyTipsIntent,
+    reportOutageIntent
 ];
 
 console.log(`Preparing to nuke agent ${projectPath}`);

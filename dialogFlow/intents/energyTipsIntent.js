@@ -24,7 +24,7 @@ const message = {
 };
 
 const energyTipsIntent = {
-    displayName: "energy tips",
+    displayName: "energy_tips",
     trainingPhrases: [
         trainingPhrase1,
         trainingPhrase2
@@ -32,4 +32,6 @@ const energyTipsIntent = {
     messages: [message]
 };
 
-module.exports = energyTipsIntent;
+module.exports = {
+    dialogFlowIntent: energyTipsIntent
+};

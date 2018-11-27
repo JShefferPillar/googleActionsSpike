@@ -31,11 +31,24 @@ function resetAgent(projectPath, emptyAgentFilename) {
 function createIntent(projectId, intent) {
     const createIntentRequest = {
         parent: intentsClient.projectAgentPath(projectId),
-        intent: intent,
+        intent: intent.dialogFlowIntent,
     };
 
     return intentsClient.createIntent(createIntentRequest).then(responses => {
-        console.log(`👍  Intent ${responses[0].name} created`);
+        console.log(`👍  Intent ${responses[0].displayName} created, with parent ${responses[0].parentFollowupIntentName || "none"}`);
+
+        if (intent.followupIntents) {
+            const intentName = responses[0].name;
+
+            const followUpIntents = intent.followupIntents.map((followup) => {
+                return {
+                    dialogFlowIntent: {...followup.dialogFlowIntent, ...{parentFollowupIntentName: intentName} },
+                    followupIntents: followup.followupIntents
+                }
+            });
+
+            return createIntents(projectId, followUpIntents)
+        }
     })
 }
 
