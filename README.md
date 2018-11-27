@@ -2,7 +2,7 @@
 Download credentails from google actions console.
 
 ```
-export=GOOGLE_APPLICATION_CREDENTIALS=<YOUR_CREDENTIALS_FILE_PATH>.json
+export GOOGLE_APPLICATION_CREDENTIALS=<YOUR_CREDENTIALS_FILE_PATH>.json
 ```
 
 ```
