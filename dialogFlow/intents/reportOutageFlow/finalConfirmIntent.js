@@ -33,7 +33,7 @@ const message = {
 };
 
 const intent = {
-    displayName: "final_confirm_intent",
+    displayName: "final_confirm",
     trainingPhrases: trainingPhrases,
     messages: [message],
     inputContextNames: [addressGivenContext.name]
