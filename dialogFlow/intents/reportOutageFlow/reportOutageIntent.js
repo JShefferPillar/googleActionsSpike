@@ -1,5 +1,6 @@
 const collectAddressIntent = require('./collectAddressIntent.js');
 const reportOutageDecline = require('./reportOutageDecline.js');
+const outageContext = require('../../contexts/outageContext.js');
 
 const trainingText = [
     "I'd like to report an outage",
@@ -41,7 +42,8 @@ const message = {
 const intent = {
     displayName: "report_outage",
     trainingPhrases: trainingPhrases,
-    messages: [message]
+    messages: [message],
+    outputContexts: [outageContext]
 };
 
 module.exports = {
