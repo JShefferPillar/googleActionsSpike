@@ -4,7 +4,7 @@ retry-address
 report an outage
 
 #bot default
-Would you like to report an outage?
+report_outage_output_0
 
 #me
 yes
@@ -46,4 +46,4 @@ I have your address as 999 west main road. Is that correct?
 yes
 
 #bot default
-Oh good.
+Thank you, your power has been reported at 999 west main road.

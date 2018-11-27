@@ -3,9 +3,9 @@
   "description": "Testing code configuring dialog flow",
   "scripts": {
     "lint": "eslint .",
-    "botium-tests": "./ci/botium_tests.sh",
-    "botium-regen": "./ci/regen_botium_convos.sh",
-    "start-emulator": "./ci/start_emulator.sh"
+    "botium-tests": "../ci/botium_tests.sh",
+    "botium-regen": "../ci/regen_botium_convos.sh",
+    "start-emulator": "../ci/start_emulator.sh"
   },
   "dependencies": {
     "dialogflow": "^0.7.0"
