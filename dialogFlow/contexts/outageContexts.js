@@ -19,3 +19,12 @@ module.exports = {
     outageContext,
     addressGivenContext
 };
+
+// ,
+// parameters: [
+//     {
+//         displayName: "address",
+//         value: "$address",
+//         entityTypeDisplayName: "@sys.address",
+//     }
+// ]

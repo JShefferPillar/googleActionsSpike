@@ -6,7 +6,7 @@ const outageContexts = require('./contexts/outageContexts.js');
 const projectId = 'pillar-voice';
 const projectPath = `projects/${projectId}`;
 
-const emptyAgentFilename = "dialogFlow/empty-agent.zip";
+const emptyAgentFilename = "./empty-agent.zip";
 
 const allIntents = [
     energyTipsIntent,
