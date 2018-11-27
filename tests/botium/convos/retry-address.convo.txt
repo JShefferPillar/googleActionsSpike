@@ -1,0 +1,49 @@
+retry-address
+
+#me
+report an outage
+
+#bot default
+Would you like to report an outage?
+
+#me
+yes
+
+#bot default
+What address do you want to report an outage for?
+
+#me
+1234 main road
+
+#bot default
+I have your address as 1234 main road. Is that correct?
+
+#me
+no
+
+#bot default
+Ok, lets try that again. What's your address?
+
+#me
+2345 main road
+
+#bot default
+I have your address as 2345 main road. Is that correct?
+
+#me
+no
+
+#bot default
+Ok, lets try that again. What's your address?
+
+#me
+999 west main road
+
+#bot default
+I have your address as 999 west main road. Is that correct?
+
+#me
+yes
+
+#bot default
+Oh good.
