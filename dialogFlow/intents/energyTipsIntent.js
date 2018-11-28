@@ -13,7 +13,7 @@ const message = {
             "Well if your electricity is running.  Then you better go catch it",
             "Grab some blankets and turn off the heat",
             "What should they do to gas guzzlers? Lock them up in a fuel cell.",
-            "You can grow your own power plant by planting a Light Bulb",
+            "You can grow your own power plant by planting a. Light Bulb",
             "Kilometers are shorter than miles.  Save gas, take your next trip in kilometers",
             "If you need something done, call an electrician – they conduit.",
             "To save money you can cut all the electricity. You will soon be in the black.",
