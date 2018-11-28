@@ -1,18 +1,9 @@
-const trainingPhrase1 = {
-    name: "3f276794-59de-4483-b3aa-4713a5ebc762",
-    type: "TEMPLATE",
-    parts: [{
-        text: "My energy bill is too high. Help!"
-    }]
-};
+const trainingPhrases = require('../trainingPhrases.js');
 
-const trainingPhrase2 = {
-    name: "02fd5b0a-cbe8-434b-be67-62a3180cf25b",
-    type: "TEMPLATE",
-    parts: [{
-        text: "tips please"
-    }]
-};
+const trainingText = [
+    "My energy bill is too high. Help!",
+    "tips please"
+];
 
 const message = {
     text: {
@@ -26,17 +17,17 @@ const message = {
             "Kilometers are shorter than miles.  Save gas, take your next trip in kilometers",
             "If you need something done, call an electrician – they conduit.",
             "To save money you can cut all the electricity. You will soon be in the black.",
-            "If you turn off all your lights you will be de-lighted."
+            "If you turn off all your lights you will be de-lighted.",
+            "Consider hibernating through the cold months to save on heat",
+            "Many birds migrate seasonally to avoid high heading/cooling bills.",
+            "Time travel to 1878"
         ]
     }
 };
 
 const energyTipsIntent = {
     displayName: "energy_tips",
-    trainingPhrases: [
-        trainingPhrase1,
-        trainingPhrase2
-    ],
+    trainingPhrases: trainingPhrases.trainingPhrasesFromStrings(trainingText),
     messages: [message]
 };
 

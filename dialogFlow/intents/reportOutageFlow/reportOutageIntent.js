@@ -1,6 +1,7 @@
 const collectAddressIntent = require('./collectAddressIntent.js');
 const reportOutageDecline = require('./reportOutageDecline.js');
 const {outageContext} = require('../../contexts/outageContexts.js');
+const trainingPhrases = require('../../trainingPhrases.js');
 
 const trainingText = [
     "I'd like to report an outage",
@@ -17,30 +18,6 @@ const trainingText = [
 
 ];
 
-const uuids = [
-    "f497ee62-3c5e-432e-ba42-69349619365b",
-    "e5ffd5a1-c8fc-4574-b213-510773817e86",
-    "58f13348-4ead-4d7e-beb1-6abce24d2fc4",
-    "6e293004-d4f3-45b2-a6e5-50d4bc3b0af9",
-    "228d6c45-e0cc-4ee9-b31c-8ccdde009fe1",
-    "c8801452-2aab-4a45-a637-6942d21d70b6",
-    "c8801452-2aab-4a45-a637-6942d21d70b7",
-    "c8801452-2aab-4a45-a637-6942d21d70b8",
-    "c8801452-2aab-4a45-a637-6942d21d70b9",
-    "c8801452-2aab-4a45-a637-6942d21d7010",
-    "c8801452-2aab-4a45-a637-6942d21d7011"
-];
-
-const trainingPhrases = trainingText.map( (text, index) => {
-    return {
-        name: uuids[index],
-        type: "TEMPLATE",
-        parts: [{
-            text
-        }]
-    }
-});
-
 const message = {
     text: {
         text: [
@@ -52,7 +29,7 @@ const message = {
 
 const intent = {
     displayName: "report_outage",
-    trainingPhrases: trainingPhrases,
+    trainingPhrases: trainingPhrases.trainingPhrasesFromStrings(trainingText),
     messages: [message],
     outputContexts: [outageContext]
 };
