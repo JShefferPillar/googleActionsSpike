@@ -1,4 +1,4 @@
-const uuid = require(\u0027uuid/v4\u0027);
+const uuid = require('uuid/v4');
 
 function trainingPhrasesFromStrings(phrases) {
     return phrases.map( text => {

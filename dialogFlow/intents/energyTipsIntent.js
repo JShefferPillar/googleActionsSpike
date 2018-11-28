@@ -1,4 +1,4 @@
-const trainingPhrases = require('../../trainingPhrases.js');
+const trainingPhrases = require('../trainingPhrases.js');
 
 const trainingText = [
     "My energy bill is too high. Help!",
